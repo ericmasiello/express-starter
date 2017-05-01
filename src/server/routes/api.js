@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import {
   stub,
-} from '../controllers/apiController.js';
+} from '../controllers/apiController';
 
 const router = Router();
 

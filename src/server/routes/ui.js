@@ -2,7 +2,7 @@ import { Router } from 'express';
 import {
   main,
   health,
-} from '../controllers/uiController.js';
+} from '../controllers/uiController';
 
 const router = Router();
 
