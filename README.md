@@ -1,3 +1,12 @@
+# What is this for?
+
+Building Node apps that leverage all support all the amazing features allowed by tooling like Babel and Webpack is a bit more complicated than it ought to be. The goal of this project is to define a simple starter package that:
+
+- Allows developers to leverage unsupported language features through Babel
+- Requires minimal configuration
+- Prescribes a sensible folder structure without over-prescribing excessive tooling
+- Is debuggable using tools like Visual Studio Code 
+
 ## Debugging with Visual Studio Code
 
 If you are using [Visual Studio Code](https://code.visualstudio.com/), you can enable debugging by creating the following `launch.json` file inside a directory `.vscode` within your project.
@@ -10,7 +19,7 @@ If you are using [Visual Studio Code](https://code.visualstudio.com/), you can e
       "name": "Launch",
       "type": "node2",
       "request": "launch",
-      "program": "${workspaceRoot}/www/index.js",
+      "program": "${workspaceRoot}/src/www/index.js",
       "stopOnEntry": false,
       "args": [],
       "cwd": "${workspaceRoot}",
