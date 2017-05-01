@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   name: 'server',
@@ -20,7 +19,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      }
+      },
     ],
   },
   node: {
