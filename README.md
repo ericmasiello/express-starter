@@ -1,4 +1,6 @@
-## Debugging with VSCode
+## Debugging with Visual Studio Code
+
+If you are using [Visual Studio Code](https://code.visualstudio.com/), you can enable debugging by creating the following `launch.json` file inside a directory `.vscode` within your project.
 
 ```
 {
@@ -6,7 +8,7 @@
   "configurations": [
     {
       "name": "Launch",
-      "type": "node",
+      "type": "node2",
       "request": "launch",
       "program": "${workspaceRoot}/www/index.js",
       "stopOnEntry": false,
@@ -20,9 +22,9 @@
       "env": {
         "NODE_ENV": "development"
       },
-      "externalConsole": false,
-      "sourceMaps": false,
-      "outDir": null
+      "console": "internalConsole",
+      "sourceMaps": true,
+      "outFiles": []
     },
     {
       "name": "Attach",
@@ -31,8 +33,8 @@
       "port": 5858,
       "address": "localhost",
       "restart": false,
-      "sourceMaps": false,
-      "outDir": null,
+      "sourceMaps": true,
+      "outFiles": [],
       "localRoot": "${workspaceRoot}",
       "remoteRoot": null
     }
