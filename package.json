@@ -22,8 +22,9 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src tools .eslintrc.js --ext [js,jsx] --cache",
+    "test": "echo \"Error: no test specified\" && exit 1",    
+    "lint": "eslint . '**/.*.js' --cache",
+    "lint:fix": "npm run lint -- --fix",
     "prebuild": "rimraf build",
     "build": "webpack --progress --config ./tools/webpack/webpack.server.babel.js"
   },
