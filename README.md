@@ -17,8 +17,9 @@ If you are using [Visual Studio Code](https://code.visualstudio.com/), you can e
   "configurations": [
     {
       "name": "Launch",
-      "type": "node2",
+      "type": "node",
       "request": "launch",
+      "protocol": "inspector",
       "program": "${workspaceRoot}/src/www/index.js",
       "stopOnEntry": false,
       "args": [],
