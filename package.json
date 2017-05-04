@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "bunyan": "^1.8.10",
+    "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "helmet": "^3.5.0",
