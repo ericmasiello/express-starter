@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "bunyan": "^1.8.10",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "helmet": "^3.5.0",
@@ -24,6 +25,7 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
+    "start": "babel-node src/www/index.js | bunyan",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . '**/.*.js' --cache",
     "lint:fix": "npm run lint -- --fix",

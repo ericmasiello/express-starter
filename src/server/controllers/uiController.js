@@ -1,4 +1,7 @@
+import logger from '../logger';
+
 export function main(request, response) {
+  logger.info('Everything seems okay!');
   response.send('Okay!');
 }
 
