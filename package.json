@@ -19,6 +19,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^3.13.0",
     "eslint-config-ericmasiello": "latest",
+    "eslint-loader": "^1.7.1",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
