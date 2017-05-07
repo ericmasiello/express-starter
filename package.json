@@ -34,7 +34,6 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "prestart": "npm run build",
     "start": "node ./build/server.js",
     "dev": "babel-node src/www/index.js | bunyan",
     "test": "echo \"Error: no test specified\" && exit 1",
