@@ -1,6 +1,10 @@
 {
   "name": "express-starter",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.9.4",
+    "npm": "3.10.10"
+  },
   "main": "index.js",
   "dependencies": {
     "bunyan": "^1.8.10",
@@ -30,6 +34,7 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
+    "prestart": "npm run build",
     "start": "node ./build/server.js",
     "dev": "babel-node src/www/index.js | bunyan",
     "test": "echo \"Error: no test specified\" && exit 1",
