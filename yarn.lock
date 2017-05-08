@@ -1660,9 +1660,9 @@ eslint-config-airbnb@14.0.0:
   dependencies:
     eslint-config-airbnb-base "^11.0.1"
 
-eslint-config-ericmasiello@latest:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-ericmasiello/-/eslint-config-ericmasiello-1.1.0.tgz#4ce79e720577a3a6229a4d9a823659cc69e81923"
+eslint-config-ericmasiello@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-ericmasiello/-/eslint-config-ericmasiello-1.2.0.tgz#7b8819e9cea8f23160796c9ed57405a4ed52616a"
   dependencies:
     eslint-config-airbnb "14.0.0"
 
