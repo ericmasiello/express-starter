@@ -1,9 +1,10 @@
 /* @flow */
 import logger from '../logger';
+import routeMatch from '../util/routeMatch';
 
 export function main(request: express$Request, response: express$Response): void {
-  logger.info('Everything seems okay!');
-  response.send('Okay!');
+  logger.info('Called main controller');
+  return routeMatch(request, response);
 }
 
 export function health(request: express$Request, response: express$Response): void {
