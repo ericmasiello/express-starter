@@ -8,6 +8,6 @@ import {
 const router = Router();
 
 router.get('/health', health);
-router.get('/', main);
+router.get('*', main);
 
 export default router;
