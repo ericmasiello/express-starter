@@ -7,12 +7,17 @@
   },
   "main": "index.js",
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "bunyan": "^1.8.10",
     "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "helmet": "^3.5.0",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -49,7 +54,9 @@
     "flow:update": "flow-typed install",
     "flow:stop": "flow stop",
     "prebuild": "rimraf build",
-    "build": "webpack --progress --config ./tools/webpack/webpack.server.babel.js"
+    "build": "npm-run-all --parallel build:server build:client",
+    "build:server": "webpack --progress --config ./tools/webpack/webpack.server.babel.js",
+    "build:client": "webpack --progress --config ./tools/webpack/webpack.client.babel.js"
   },
   "repository": {
     "type": "git",
