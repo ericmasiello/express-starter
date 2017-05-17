@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { match, RouterContext } from 'react-router';
+import RouterContext, { match } from 'react-router';
 import logger from '../logger';
 import routes from '../../client/routes';
 
@@ -40,6 +40,8 @@ export function routeMatchCallback(request: express$Request, response: express$R
 }
 
 export default function routeMatch(request: express$Request, response: express$Response): void {
+  console.log('match =', match);
+  console.log('RouterContext', RouterContext);
   return match({
     routes,
     location: request.url,
