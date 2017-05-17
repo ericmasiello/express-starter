@@ -1,17 +1,20 @@
 import { main, health } from '../uiController';
+import routeMatch from '../../util/routeMatch';
+
+jest.mock('../../util/routeMatch');
 
 describe('main', () => {
   it('should be defined', () => {
     expect(main).toBeDefined();
   });
 
-  it('should send response as json', () => {
-    const requestMock = {};
-    const responseMock = {
-      send: jest.fn(),
-    };
-    main(requestMock, responseMock);
-    expect(responseMock.send.mock.calls[0][0]).toEqual('Okay!');
+  describe('index route', () => {
+    it('should call the routeMatch module', () => {
+      const requestMock = {};
+      const responseMock = {};
+      main(requestMock, responseMock);
+      expect(routeMatch).toBeCalledWith(requestMock, responseMock);
+    });
   });
 });
 
