@@ -1,13 +1,7 @@
 import { main, health } from '../uiController';
+import routeMatch from '../../util/routeMatch';
 
-// mock the routeMatch module
-jest.mock('../../util/routeMatch', () => {
-  return () => {
-    return {
-      isMocked: true,
-    };
-  };
-});
+jest.mock('../../util/routeMatch');
 
 describe('main', () => {
   it('should be defined', () => {
@@ -18,9 +12,8 @@ describe('main', () => {
     it('should call the routeMatch module', () => {
       const requestMock = {};
       const responseMock = {};
-
-      const result = main(requestMock, responseMock);
-      expect(result.isMocked).toEqual(true);
+      main(requestMock, responseMock);
+      expect(routeMatch).toBeCalledWith(requestMock, responseMock);
     });
   });
 });

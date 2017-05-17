@@ -5,7 +5,7 @@ import RouterContext, { match } from 'react-router';
 import logger from '../logger';
 import routes from '../../client/routes';
 
-export function routeMatchCallback(request: express$Request, response: express$Response): Function {
+export function routeMatchCallback(response: express$Response): Function {
   return (error: Error, redirectionLocation: Location, renderProps: {}): void => {
     if (error) {
       logger.error(error);
@@ -14,7 +14,7 @@ export function routeMatchCallback(request: express$Request, response: express$R
     }
 
     if (redirectionLocation) {
-      response.redirect(302, redirectionLocation.pathname + redirectionLocation.search);
+      response.redirect(302, `${redirectionLocation.pathname}${redirectionLocation.search}`);
       return;
     }
 
@@ -36,14 +36,12 @@ export function routeMatchCallback(request: express$Request, response: express$R
     // no route match, so 404. In a real app you might render a custom
     // 404 view here
     response.sendStatus(404);
-  }
+  };
 }
 
 export default function routeMatch(request: express$Request, response: express$Response): void {
-  console.log('match =', match);
-  console.log('RouterContext', RouterContext);
   return match({
     routes,
     location: request.url,
-  }, routeMatchCallback(request, response));
+  }, routeMatchCallback(response));
 }
