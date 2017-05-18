@@ -62,8 +62,7 @@ describe('routeMatchCallback', () => {
 
     it('should render React component and send html response', () => {
       const mockResponse = {
-        set: jest.fn().mockReturnThis(),
-        send: jest.fn(),
+        render: jest.fn(),
       };
       const result = routeMatchCallback(mockResponse);
       const renderProps = {
@@ -71,8 +70,9 @@ describe('routeMatchCallback', () => {
       };
       result(null, null, renderProps);
       expect(renderToString).toBeCalled();
-      expect(mockResponse.set).toBeCalledWith('content-type', 'text/html');
-      expect(mockResponse.send).toBeCalledWith(mockHtml);
+      expect(mockResponse.render).toBeCalledWith('index', {
+        html: mockHtml,
+      });
     });
 
     it('should return a 404 in all other cases', () => {
