@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import RouterContext, { match } from 'react-router';
+import { RouterContext, match } from 'react-router';
 import logger from '../logger';
 import routes from '../../client/routes';
 
