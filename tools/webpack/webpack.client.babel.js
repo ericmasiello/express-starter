@@ -8,7 +8,7 @@ module.exports = {
     app: ['./src/client/index.js'],
   },
   output: {
-    path: path.join(process.cwd(), './public'),
+    path: path.join(process.cwd(), './public/build'),
     filename: '[name].js',
   },
   module: {
