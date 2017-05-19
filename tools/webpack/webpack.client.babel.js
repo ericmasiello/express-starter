@@ -5,10 +5,10 @@ module.exports = {
   devtool: 'hidden-source-map',
   context: path.join(process.cwd()),
   entry: {
-    server: ['./src/client/index.js'],
+    app: ['./src/client/index.js'],
   },
   output: {
-    path: path.join(process.cwd(), './build'),
+    path: path.join(process.cwd(), './public'),
     filename: '[name].js',
   },
   module: {
