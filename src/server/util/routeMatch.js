@@ -19,17 +19,13 @@ export function routeMatchCallback(response: express$Response): Function {
     }
 
     if (renderProps) {
-      // const currentPath = props.routes[1].path;
       const html = renderToString(
         <RouterContext {...renderProps} />,
       );
 
-      // https://medium.com/@dai_shi/express-react-redux-server-side-rendering-with-router-v4-and-webpack-v2-plus-hmr-43418b85a0d4
-      // const preloadedState =
-      // `<script>window.__PRELOADED_STATE__=${serialize(store.getState())}</script>`;
-      // const html = getHtml(appHtml, preloadedState);
-      response.set('content-type', 'text/html');
-      response.send(html);
+      response.render('index', {
+        html,
+      });
       return;
     }
 
