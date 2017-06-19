@@ -1,7 +1,26 @@
-const path = require('path');
+/* eslint-disable import/no-extraneous-dependencies */
+import webpack from 'webpack';
+import merge from 'webpack-merge';
+/* eslint-disable import/no-extraneous-dependencies */
+import path from 'path';
 
-module.exports = {
-  name: 'client',
+const uglify = new webpack.optimize.UglifyJsPlugin({
+  comments: false,
+  dropDebugger: true,
+  dropConsole: true,
+  compressor: {
+    warnings: false,
+  },
+});
+const hmr = new webpack.HotModuleReplacementPlugin();
+const noEmitOnError = new webpack.NoEmitOnErrorsPlugin();
+const productionEnv = new webpack.DefinePlugin({
+  'process.env': {
+    NODE_ENV: JSON.stringify('production'),
+  },
+});
+
+const baseConfig = {
   devtool: 'hidden-source-map',
   context: path.join(process.cwd()),
   entry: {
@@ -29,3 +48,32 @@ module.exports = {
     ],
   },
 };
+
+const customConfig = {
+  dev: {
+    devtool: 'eval',
+    entry: ['webpack-hot-middleware/client'],
+    plugins: [
+      hmr,
+      noEmitOnError,
+    ],
+    module: {
+      rules: [{
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['react-hmre'],
+        },
+      }],
+    },
+  },
+  dist: {
+    plugins: [
+      uglify,
+      productionEnv,
+    ],
+  },
+};
+
+export default env => merge(baseConfig, customConfig[env]);
