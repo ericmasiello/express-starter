@@ -4,7 +4,9 @@ import merge from 'webpack-merge';
 /* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
 
-const uglify = new webpack.optimize.UglifyJsPlugin({
+const orderPlugin = new webpack.optimize.OccurrenceOrderPlugin();
+const dedupePlugin = new webpack.optimize.DedupePlugin();
+const uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
   comments: false,
   dropDebugger: true,
   dropConsole: true,
@@ -12,9 +14,9 @@ const uglify = new webpack.optimize.UglifyJsPlugin({
     warnings: false,
   },
 });
-const hmr = new webpack.HotModuleReplacementPlugin();
-const noEmitOnError = new webpack.NoEmitOnErrorsPlugin();
-const productionEnv = new webpack.DefinePlugin({
+const hmrPlugin = new webpack.HotModuleReplacementPlugin();
+const noEmitOnErrorPlugin = new webpack.NoEmitOnErrorsPlugin();
+const productionEnvPlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify('production'),
   },
@@ -30,49 +32,60 @@ const baseConfig = {
     path: path.join(process.cwd(), './public/build'),
     filename: '[name].js',
   },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: {
-          emitWarning: true,
-        },
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-    ],
-  },
+  plugins: [
+    orderPlugin,
+    productionEnvPlugin,
+  ],
 };
 
 const customConfig = {
   dev: {
     devtool: 'eval',
-    entry: ['webpack-hot-middleware/client'],
+    entry: {
+      app: ['webpack-hot-middleware/client'],
+    },
     plugins: [
-      hmr,
-      noEmitOnError,
+      hmrPlugin,
+      noEmitOnErrorPlugin,
     ],
     module: {
-      rules: [{
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['react-hmre'],
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          enforce: 'pre',
+          loader: 'eslint-loader',
+          options: {
+            emitWarning: true,
+          },
         },
-      }],
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+          query: {
+            presets: ['react-hmre'],
+          },
+        },
+      ],
     },
   },
   dist: {
+    bail: true,
+    devtool: 'source-map',
+    output: {
+      publicPath: '/build/',
+    },
     plugins: [
-      uglify,
-      productionEnv,
+      dedupePlugin,
+      uglifyPlugin,
     ],
+    module: {
+      loaders: [{
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+      }],
+    },
   },
 };
 

@@ -26,7 +26,9 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.0.1",
     "eslint": "^3.13.0",
     "eslint-config-ericmasiello": "^1.2.0",
     "eslint-loader": "^1.7.1",
@@ -40,12 +42,14 @@
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
     "webpack": "^2.4.1",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
   },
   "scripts": {
     "prestart": "npm run build",
     "start": "node ./build/server.js",
-    "dev": "babel-node src/www/index.js | bunyan",
+    "dev": "cross-env NODE_ENV=development babel-node src/www/index.js | bunyan",
     "validate": "npm-run-all --parallel test flow:check lint",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
@@ -57,9 +61,9 @@
     "flow:stop": "flow stop",
     "build": "npm-run-all --parallel build:server build:client",
     "prebuild:server": "rimraf build",
-    "build:server": "webpack --progress --config ./tools/webpack/webpack.server.babel.js",
+    "build:server": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.server.babel.js",
     "prebuild:client": "rimraf public/build",
-    "build:client": "webpack --progress --config ./tools/webpack/webpack.client.babel.js --env=dist"
+    "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.babel.js --env=dist"
   },
   "repository": {
     "type": "git",

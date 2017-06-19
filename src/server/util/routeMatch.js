@@ -23,8 +23,14 @@ export function routeMatchCallback(response: express$Response): Function {
         <RouterContext {...renderProps} />,
       );
 
+      // TODO: see if '/build' can be pulled off of something in the webpack config?
+      // TODO: see if the bundle name (app.js) can also be pulled off the webpack.config
+      // so its not hardcoded in index.ejs
+      const buildPath = process.env.NODE_ENV !== 'production' ? null : '/build';
+
       response.render('index', {
         html,
+        buildPath,
       });
       return;
     }

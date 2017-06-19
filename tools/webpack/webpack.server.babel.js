@@ -1,4 +1,13 @@
-const path = require('path');
+/* eslint-disable import/no-extraneous-dependencies */
+import webpack from 'webpack';
+/* eslint-disable import/no-extraneous-dependencies */
+import path from 'path';
+
+const envPlugin = new webpack.DefinePlugin({
+  'process.env': {
+    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+  },
+});
 
 module.exports = {
   name: 'server',
@@ -30,6 +39,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    envPlugin,
+  ],
   node: {
     console: false,
     global: false,

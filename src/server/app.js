@@ -19,6 +19,11 @@ app.set('view engine', 'ejs');
 // http://stackoverflow.com/questions/41707662/webpack-express-ejs-error-cannot-find-module
 app.engine('.ejs', ejs);
 
+if (process.env.NODE_ENV !== 'production') {
+  const hotMiddleware = require('./middleware/hot'); // eslint-disable-line global-require
+  app.use(hotMiddleware.default);
+}
+
 app.use('/api/v1', apiRoutes);
 app.use('/', uiRoutes);
 
