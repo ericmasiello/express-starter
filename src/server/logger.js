@@ -1,13 +1,9 @@
 /* @flow */
-import bunyan from 'bunyan';
+import winston from 'winston';
 import {
-  APP_NAME,
   LOG_LEVEL,
 } from '../config';
 
-const logger = bunyan.createLogger({
-  name: APP_NAME,
-  level: LOG_LEVEL,
-});
+winston.level = LOG_LEVEL;
 
-export default logger;
+export default winston;
