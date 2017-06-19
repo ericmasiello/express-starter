@@ -71,6 +71,7 @@ describe('routeMatchCallback', () => {
       result(null, null, renderProps);
       expect(renderToString).toBeCalled();
       expect(mockResponse.render).toBeCalledWith('index', {
+        buildPath: null,
         html: mockHtml,
       });
     });

@@ -19,7 +19,8 @@ app.set('view engine', 'ejs');
 // http://stackoverflow.com/questions/41707662/webpack-express-ejs-error-cannot-find-module
 app.engine('.ejs', ejs);
 
-if (process.env.NODE_ENV !== 'production') {
+// FIXME: maybe use isdev module?
+if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
   const hotMiddleware = require('./middleware/hot'); // eslint-disable-line global-require
   app.use(hotMiddleware.default);
 }
