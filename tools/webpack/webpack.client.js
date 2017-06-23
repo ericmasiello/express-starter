@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import webpack from 'webpack';
-import merge from 'webpack-merge';
+const webpack = require('webpack');
+const merge = require('webpack-merge');
 /* eslint-disable import/no-extraneous-dependencies */
-import path from 'path';
+const path = require('path');
 
 const orderPlugin = new webpack.optimize.OccurrenceOrderPlugin();
 const dedupePlugin = new webpack.optimize.DedupePlugin();
@@ -89,4 +89,4 @@ const customConfig = {
   },
 };
 
-export default env => merge(baseConfig, customConfig[env]);
+module.exports = env => merge(baseConfig, customConfig[env]);

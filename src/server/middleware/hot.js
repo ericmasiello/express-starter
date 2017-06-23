@@ -4,7 +4,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpack from 'webpack';
 /* eslint-enable import/no-extraneous-dependencies */
-import configFactory from '../../../tools/webpack/webpack.client.babel';
+import configFactory from '../../../tools/webpack/webpack.client';
 
 const config = configFactory('dev');
 const bundler = webpack(config);

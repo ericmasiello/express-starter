@@ -50,7 +50,7 @@
   },
   "scripts": {
     "prestart": "npm run build",
-    "start": "node ./build/server.js",
+    "start": "node ./build/www",
     "dev": "cross-env NODE_ENV=development babel-node src/www/index.js",
     "validate": "npm-run-all --parallel test flow lint",
     "test": "jest --coverage",
@@ -61,9 +61,9 @@
     "flow:update": "flow-typed install",
     "build": "npm-run-all --parallel build:server build:client",
     "prebuild:server": "rimraf build",
-    "build:server": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.server.babel.js",
+    "build:server": "babel src -d build",
     "prebuild:client": "rimraf public/build",
-    "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.babel.js --env=dist",
+    "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.js --env=dist",
     "prepush": "npm run validate"
   },
   "repository": {
