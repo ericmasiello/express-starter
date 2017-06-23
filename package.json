@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^6.9.0",
     "flow-bin": "^0.45.0",
     "flow-typed": "^2.1.2",
+    "husky": "^0.14.0",
     "jest": "^20.0.0",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
@@ -64,7 +65,8 @@
     "prebuild:server": "rimraf build",
     "build:server": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.server.babel.js",
     "prebuild:client": "rimraf public/build",
-    "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.babel.js --env=dist"
+    "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.babel.js --env=dist",
+    "prepush": "npm run validate"
   },
   "repository": {
     "type": "git",
