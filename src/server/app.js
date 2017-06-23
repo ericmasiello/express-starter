@@ -3,7 +3,9 @@ import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { __express as ejs } from 'ejs';
+import isdev from 'isdev';
 import compression from 'compression';
+import hotMiddleware from './middleware/hot';
 import uiRoutes from './routes/ui';
 import apiRoutes from './routes/api';
 import { MORGAN_CONFIG } from '../config';
@@ -19,10 +21,8 @@ app.set('view engine', 'ejs');
 // http://stackoverflow.com/questions/41707662/webpack-express-ejs-error-cannot-find-module
 app.engine('.ejs', ejs);
 
-// FIXME: maybe use isdev module?
-if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
-  const hotMiddleware = require('./middleware/hot'); // eslint-disable-line global-require
-  app.use(hotMiddleware.default);
+if (isdev) {
+  app.use(hotMiddleware);
 }
 
 app.use('/api/v1', apiRoutes);
