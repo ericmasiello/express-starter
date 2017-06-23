@@ -1,3 +1,4 @@
+/* @flow */
 /* eslint-disable import/no-extraneous-dependencies */
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
