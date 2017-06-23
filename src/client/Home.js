@@ -1,13 +1,16 @@
 /* @flow */
 import React, { Component } from 'react';
+import type { Namespace$AppState } from '../types';
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       toggle: false,
     };
   }
+
+  state: Namespace$AppState;
 
   render() {
     return (
