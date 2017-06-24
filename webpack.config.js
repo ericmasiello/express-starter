@@ -40,6 +40,9 @@ const baseConfig = {
 const customConfig = {
   dev: {
     devtool: 'eval',
+    output: {
+      publicPath: '/',
+    },
     entry: {
       app: ['webpack-hot-middleware/client'],
     },
