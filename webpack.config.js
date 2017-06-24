@@ -16,15 +16,9 @@ const uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
 });
 const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 const noEmitOnErrorPlugin = new webpack.NoEmitOnErrorsPlugin();
-const devEnvPlugin = new webpack.DefinePlugin({
-  'process.env': {
-    WEBPACK: true,
-  },
-});
 const productionEnvPlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify('production'),
-    WEBPACK: true,
   },
 });
 
@@ -40,20 +34,7 @@ const baseConfig = {
   },
   plugins: [
     orderPlugin,
-    new ExtractTextPlugin('bundle.css'),
   ],
-  module: {
-    loaders: [
-      {
-        test: /\.css/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
-        include: path.resolve(__dirname, 'src'),
-      },
-    ],
-  },
 };
 
 const customConfig = {
@@ -65,7 +46,6 @@ const customConfig = {
     plugins: [
       hmrPlugin,
       noEmitOnErrorPlugin,
-      devEnvPlugin,
     ],
     module: {
       loaders: [
@@ -85,6 +65,11 @@ const customConfig = {
             presets: ['react-hmre'],
           },
         },
+        {
+          test: /\.css/,
+          loader: 'style-loader!css-loader',
+          include: path.resolve(__dirname, 'src'),
+        },
       ],
     },
   },
@@ -97,13 +82,24 @@ const customConfig = {
     plugins: [
       uglifyPlugin,
       productionEnvPlugin,
+      new ExtractTextPlugin('bundle.css'),
     ],
     module: {
-      loaders: [{
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      }],
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+        },
+        {
+          test: /\.css/,
+          loader: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: 'css-loader',
+          }),
+          include: path.resolve(__dirname, 'src'),
+        },
+      ],
     },
   },
 };
