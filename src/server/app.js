@@ -3,7 +3,6 @@ import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import compression from 'compression';
-import hotMiddleware from './middleware/hot';
 import uiRoutes from './routes/ui';
 import apiRoutes from './routes/api';
 import { MORGAN_CONFIG } from '../config';
@@ -17,7 +16,8 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 if (!isprod) {
-  app.use(hotMiddleware);
+  const hotMiddleware = require('./middleware/hot'); // eslint-disable-line global-require
+  app.use(hotMiddleware.default);
 }
 
 app.use('/api/v1', apiRoutes);
