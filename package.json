@@ -8,6 +8,7 @@
   "main": "index.js",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "bunyan": "^1.8.10",
     "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
@@ -17,8 +18,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router": "^3.0.2",
-    "winston": "^2.3.1"
+    "react-router": "^3.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -50,7 +50,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node ./build/www",
-    "dev": "cross-env NODE_ENV=development babel-node src/www/index.js",
+    "dev": "cross-env NODE_ENV=development babel-node src/www/index.js | bunyan",
     "validate": "npm-run-all --parallel test flow lint",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
