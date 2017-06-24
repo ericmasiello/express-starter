@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import type { Namespace$AppState } from '../types';
 
+if(process.env.WEBPACK) require('./Home.css');
+
 export default class Home extends Component {
   constructor() {
     super();
