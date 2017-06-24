@@ -1,5 +1,7 @@
 import app from '../app';
 
-it('should pass', () => {
+jest.mock('../middleware/hot', () => jest.fn());
+
+it('should be defined', () => {
   expect(app).toBeDefined();
 });

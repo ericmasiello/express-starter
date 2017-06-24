@@ -1,5 +1,5 @@
-// flow-typed signature: 9231683897fa28932f1aecb9dd7a6e24
-// flow-typed version: e6aa8b0b44/express_v4.x.x/flow_>=v0.32.x
+// flow-typed signature: 5ab2422f34a4867000a06e5093ff423a
+// flow-typed version: a46da1b82a/express_v4.x.x/flow_>=v0.32.x
 
 import type { Server } from 'http';
 
@@ -85,7 +85,7 @@ declare class express$Response extends http$ServerResponse mixins express$Reques
   sendStatus(statusCode: number): this;
   header(field: string, value?: string): this;
   header(headers: {[name: string]: string}): this;
-  set(field: string, value?: string): this;
+  set(field: string, value?: string|string[]): this;
   set(headers: {[name: string]: string}): this;
   status(statusCode: number): this;
   type(type: string): this;
@@ -136,7 +136,7 @@ declare class express$Route {
 declare class express$Router extends express$Route {
   constructor(options?: express$RouterOptions): void;
   route(path: string): express$Route;
-  static (): express$Router;
+  static (options?: express$RouterOptions): express$Router;
   use(middleware: express$Middleware): this;
   use(...middleware: Array<express$Middleware>): this;
   use(path: string|RegExp|string[], ...middleware: Array<express$Middleware>): this;
