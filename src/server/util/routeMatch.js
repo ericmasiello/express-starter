@@ -5,6 +5,18 @@ import { RouterContext, match } from 'react-router';
 import logger from '../logger';
 import routes from '../../client/routes';
 import isprod from './isprod';
+import configFactory from '../../../webpack.config';
+import type { Namespace$WebpackConfig } from '../../types';
+
+const distConfig = configFactory('dist');
+
+export function getBuildPath(isprodEnv: boolean, webpackConfig: Namespace$WebpackConfig) {
+  if (isprodEnv) {
+    // remove trailing slash
+    return webpackConfig.output.publicPath.replace(/(.+)(\/$)/gm, '$1');
+  }
+  return null;
+}
 
 export function routeMatchCallback(response: express$Response): Function {
   return (error: Error, redirectionLocation: Location, renderProps: {}): void => {
@@ -24,10 +36,7 @@ export function routeMatchCallback(response: express$Response): Function {
         <RouterContext {...renderProps} />,
       );
 
-      // TODO: see if '/build' can be pulled off of something in the webpack config?
-      // TODO: see if the bundle name (app.js) can also be pulled off the webpack.config
-      // so its not hardcoded in index.ejs
-      const buildPath = isprod ? '/build' : null;
+      const buildPath = getBuildPath(isprod, distConfig);
 
       response.render('index', {
         html,

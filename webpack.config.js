@@ -5,7 +5,6 @@ const merge = require('webpack-merge');
 const path = require('path');
 
 const orderPlugin = new webpack.optimize.OccurrenceOrderPlugin();
-const dedupePlugin = new webpack.optimize.DedupePlugin();
 const uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
   comments: false,
   dropDebugger: true,
@@ -34,7 +33,6 @@ const baseConfig = {
   },
   plugins: [
     orderPlugin,
-    productionEnvPlugin,
   ],
 };
 
@@ -76,8 +74,8 @@ const customConfig = {
       publicPath: '/build/',
     },
     plugins: [
-      dedupePlugin,
       uglifyPlugin,
+      productionEnvPlugin,
     ],
     module: {
       loaders: [{

@@ -49,8 +49,8 @@
   },
   "scripts": {
     "prestart": "npm run build",
-    "start": "node ./build/www",
-    "dev": "cross-env NODE_ENV=development babel-node src/www/index.js | bunyan",
+    "start": "cross-env NODE_ENV=production node ./build/www",
+    "dev": "babel-node src/www/index.js | bunyan",
     "validate": "npm-run-all --parallel test flow lint",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
@@ -62,7 +62,7 @@
     "prebuild:server": "rimraf build",
     "build:server": "babel src -d build --source-maps --ignore test.js",
     "prebuild:client": "rimraf public/build",
-    "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.js --env=dist",
+    "build:client": "cross-env NODE_ENV=production webpack --progress --env=dist",
     "prepush": "npm run validate"
   },
   "repository": {
