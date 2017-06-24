@@ -60,7 +60,7 @@
     "flow:update": "flow-typed install",
     "build": "npm-run-all --parallel build:server build:client",
     "prebuild:server": "rimraf build",
-    "build:server": "babel src -d build",
+    "build:server": "babel src -d build --source-maps --ignore test.js",
     "prebuild:client": "rimraf public/build",
     "build:client": "cross-env NODE_ENV=production webpack --progress --config ./tools/webpack/webpack.client.js --env=dist",
     "prepush": "npm run validate"
