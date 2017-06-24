@@ -1,8 +1,8 @@
 /* @flow */
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import type { Namespace$AppState } from '../types';
-import './Home.css';
+import type { Namespace$AppState } from '../../types';
+import styles from './Home.css';
 
 export default class Home extends Component {
   constructor() {
@@ -16,7 +16,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.home}>
         <h2>Home page! {this.state.toggle ? 'Yup!' : 'Nope'}</h2>
         <button onClick={() => this.setState({ toggle: !this.state.toggle })}>Toggle</button>
         <div>

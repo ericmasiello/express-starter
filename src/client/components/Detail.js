@@ -1,15 +1,18 @@
 /* @flow */
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import './Detail.css';
+import styles from './Detail.css';
+import type { Namespace$DetailParams } from '../../types';
 
 // Note: Top level components must be class based for HMR to function
-/* eslint-disable react/prefer-stateless-function */
+// eslint-disable-next-line react/prefer-stateless-function
 export default class Detail extends Component {
+  props: Namespace$DetailParams;
+
   render() {
     return (
-      <div className="detail">
-        <h2>Detail page.</h2>
+      <div className={styles.detail}>
+        <h2>Detail page for {this.props.params.id}.</h2>
         <div>
           <Link to="/">Back Home</Link>
         </div>
@@ -17,4 +20,3 @@ export default class Detail extends Component {
     );
   }
 }
-/* eslint-enable react/prefer-stateless-function */

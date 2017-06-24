@@ -6,17 +6,5 @@
   ],
   "plugins": [
     "transform-flow-strip-types"
-  ],
-  "env": {
-    "node": {
-      "plugins": [
-        [
-          "babel-plugin-transform-require-ignore",
-          {
-            "extensions": [".css", ".scss"]
-          }
-        ]
-      ]
-    }
-  }
+  ]
 }

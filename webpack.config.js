@@ -70,7 +70,10 @@ const customConfig = {
         },
         {
           test: /\.css/,
-          loader: 'style-loader!css-loader',
+          loaders: [
+            'style-loader',
+            'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
+          ],
           include: path.resolve(__dirname, 'src'),
         },
       ],
@@ -98,7 +101,7 @@ const customConfig = {
           test: /\.css/,
           loader: ExtractTextPlugin.extract({
             fallback: 'style-loader',
-            use: 'css-loader',
+            use: 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
           }),
           include: path.resolve(__dirname, 'src'),
         },
