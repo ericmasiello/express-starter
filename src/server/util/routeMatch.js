@@ -2,11 +2,12 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { RouterContext, match } from 'react-router';
+// import { match } from 'react-router';
 import logger from '../logger';
-import routes from '../../client/routes';
 import isprod from './isprod';
 import configFactory from '../../../webpack.config';
 import type { Namespace$WebpackConfig } from '../../types';
+import { CSS_MODULE_PATTERN } from '../../../webpack/config';
 
 const distConfig = configFactory('dist');
 
@@ -52,8 +53,28 @@ export function routeMatchCallback(response: express$Response): Function {
 }
 
 export default function routeMatch(request: express$Request, response: express$Response): void {
-  return match({
-    routes,
-    location: request.url,
-  }, routeMatchCallback(response));
+  if (isprod) {
+    /* eslint-disable import/no-extraneous-dependencies, global-require */
+    const hook = require('css-modules-require-hook');
+    hook({
+      generateScopedName: CSS_MODULE_PATTERN,
+      extensions: ['.scss', '.css'],
+    });
+
+    const routes = require('../../client/routes').default;
+    /* eslint-enable import/no-extraneous-dependencies, global-require */
+
+    match({
+      routes,
+      location: request.url,
+    }, routeMatchCallback(response));
+    return;
+  }
+
+  const buildPath = getBuildPath(isprod, distConfig);
+
+  response.render('index', {
+    html: '',
+    buildPath,
+  });
 }
