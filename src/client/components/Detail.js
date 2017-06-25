@@ -1,6 +1,5 @@
 /* @flow */
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import styles from './Detail.scss';
 import type { Namespace$DetailParams } from '../../types';
 
@@ -13,9 +12,12 @@ export default class Detail extends Component {
     return (
       <div className={styles.detail}>
         <h2>Detail page for {this.props.params.id}.</h2>
-        <div>
-          <Link to="/">Back Home</Link>
-        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Nemo consequuntur maxime in eaque, aut unde. Provident voluptate,
+          recusandae inventore, mollitia, iusto ullam et obcaecati voluptatem
+          accusantium minima adipisci, fugit sunt.
+        </p>
       </div>
     );
   }

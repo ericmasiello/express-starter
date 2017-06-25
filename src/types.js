@@ -1,6 +1,6 @@
 /* @flow */
 export type Namespace$AppState = {
-  toggle: boolean,
+  clicks: number,
 };
 
 export type Namespace$DetailParams = {

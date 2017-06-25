@@ -4,4 +4,9 @@ body {
   font-family: $font-family;
   background-color: #fefefe;
   color: $primary-color;
+  margin: 0;
+}
+
+ul > li:not(:last-child) {
+  margin-bottom: 0.25rem;
 }
