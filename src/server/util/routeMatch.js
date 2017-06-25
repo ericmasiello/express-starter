@@ -7,6 +7,7 @@ import logger from '../logger';
 import isprod from './isprod';
 import configFactory from '../../../webpack.config';
 import type { Namespace$WebpackConfig } from '../../types';
+import { CSS_MODULE_PATTERN } from '../../../webpack/config';
 
 const distConfig = configFactory('dist');
 
@@ -56,7 +57,7 @@ export default function routeMatch(request: express$Request, response: express$R
     /* eslint-disable import/no-extraneous-dependencies, global-require */
     const hook = require('css-modules-require-hook');
     hook({
-      generateScopedName: '[name]__[local]___[hash:base64:5]',
+      generateScopedName: CSS_MODULE_PATTERN,
     });
 
     const routes = require('../../client/routes').default;

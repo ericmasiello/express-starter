@@ -3,17 +3,10 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const { CSS_MODULE_PATTERN } = require('./webpack/config');
 
 const orderPlugin = new webpack.optimize.OccurrenceOrderPlugin();
-const uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
-  comments: false,
-  dropDebugger: true,
-  dropConsole: true,
-  compressor: {
-    warnings: false,
-  },
-});
 const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 const noEmitOnErrorPlugin = new webpack.NoEmitOnErrorsPlugin();
 const productionEnvPlugin = new webpack.DefinePlugin({
@@ -21,9 +14,10 @@ const productionEnvPlugin = new webpack.DefinePlugin({
     NODE_ENV: JSON.stringify('production'),
   },
 });
+const extractTextPluin = new ExtractTextWebpackPlugin('bundle.css');
 
 const baseConfig = {
-  devtool: 'hidden-source-map',
+  devtool: 'source-map',
   context: path.join(process.cwd()),
   entry: {
     app: ['./src/client/index.js'],
@@ -39,7 +33,6 @@ const baseConfig = {
 
 const customConfig = {
   dev: {
-    devtool: 'eval',
     output: {
       publicPath: '/',
     },
@@ -69,10 +62,10 @@ const customConfig = {
           },
         },
         {
-          test: /\.css/,
+          test: /\.(css|scss)$/,
           loaders: [
             'style-loader',
-            'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
+            `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
           ],
           include: path.resolve(__dirname, 'src'),
         },
@@ -81,14 +74,12 @@ const customConfig = {
   },
   dist: {
     bail: true,
-    devtool: 'source-map',
     output: {
       publicPath: '/build/',
     },
     plugins: [
-      uglifyPlugin,
       productionEnvPlugin,
-      new ExtractTextPlugin('bundle.css'),
+      extractTextPluin,
     ],
     module: {
       loaders: [
@@ -98,10 +89,10 @@ const customConfig = {
           exclude: /node_modules/,
         },
         {
-          test: /\.css/,
-          loader: ExtractTextPlugin.extract({
+          test: /\.(css|scss)$/,
+          loader: ExtractTextWebpackPlugin.extract({
             fallback: 'style-loader',
-            use: 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
+            use: `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
           }),
           include: path.resolve(__dirname, 'src'),
         },
