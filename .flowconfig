@@ -5,3 +5,6 @@
 [libs]
 
 [options]
+# map files with .scss estensiosn to the npm dependency "empty/object"
+# See https://stackoverflow.com/questions/41400611/flow-module-not-found-with-scss-file
+module.name_mapper.extension='scss' -> 'empty/object'

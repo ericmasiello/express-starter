@@ -66,6 +66,8 @@ const customConfig = {
           loaders: [
             'style-loader',
             `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
+            'postcss-loader',
+            'sass-loader',
           ],
           include: path.resolve(__dirname, 'src'),
         },
@@ -92,7 +94,11 @@ const customConfig = {
           test: /\.(css|scss)$/,
           loader: ExtractTextWebpackPlugin.extract({
             fallback: 'style-loader',
-            use: `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
+            use: [
+              `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
+              'postcss-loader',
+              'sass-loader',
+            ],
           }),
           include: path.resolve(__dirname, 'src'),
         },

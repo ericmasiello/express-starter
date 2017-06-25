@@ -58,6 +58,7 @@ export default function routeMatch(request: express$Request, response: express$R
     const hook = require('css-modules-require-hook');
     hook({
       generateScopedName: CSS_MODULE_PATTERN,
+      extensions: ['.scss', '.css'],
     });
 
     const routes = require('../../client/routes').default;
