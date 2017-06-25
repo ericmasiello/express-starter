@@ -3,3 +3,16 @@
 .home {
   color: $primary-color;
 }
+
+.hero {
+  padding: 40px;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  color: $hero-color;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+}

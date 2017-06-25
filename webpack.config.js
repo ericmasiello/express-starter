@@ -29,6 +29,17 @@ const baseConfig = {
   plugins: [
     orderPlugin,
   ],
+  module: {
+    loaders: [
+      {
+        test: /\.(ttf|otf|eot|svg|woff2|jpg|gif|png?)(\?.+)?$/,
+        loader: 'file-loader',
+        options: {
+          limit: 10000,
+        },
+      },
+    ],
+  },
 };
 
 const customConfig = {

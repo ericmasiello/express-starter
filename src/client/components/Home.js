@@ -17,8 +17,10 @@ export default class Home extends Component {
   render() {
     return (
       <div className={styles.home}>
-        <h2>Home page! {this.state.toggle ? 'Yup!' : 'Nope'}</h2>
-        <button onClick={() => this.setState({ toggle: !this.state.toggle })}>Toggle</button>
+        <header className={styles.hero}>
+          <h2>Universal React Express Starter App</h2>
+        </header>
+        <button onClick={() => this.setState({ toggle: !this.state.toggle })}>{this.state.toggle ? 'On!' : 'Off!'}</button>
         <div>
           <Link to="detail/1234">Details</Link>
         </div>
