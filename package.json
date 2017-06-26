@@ -59,6 +59,7 @@
     "webpack-merge": "^4.1.0"
   },
   "scripts": {
+    "postinstall": "npm rebuild node-sass",
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node ./build/www",
     "dev": "babel-node src/www/index.js | bunyan",
