@@ -1,4 +1,7 @@
 [ignore]
+# the stylelint module uses flow. For some reason this causes flow errors.
+# since stylelint is only used as a script, we can safely ignore it
+.*/node_modules/stylelint/.*
 
 [include]
 

@@ -29,7 +29,7 @@ export default class Home extends Component {
           <li>Express with EJS templates</li>
           <li>Babel integration for client and server</li>
           <li>React and React Router</li>
-          <li>ESLint</li>
+          <li>ESLint and Stylelint</li>
           <li>Logging with Bunyan</li>
         </ul>
         <h2>Dev-Mode Features</h2>

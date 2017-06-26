@@ -1,17 +1,17 @@
 @import '../styles/vars';
 
 .hero {
-  padding: 40px;
-  background-image: url('../images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  color: $hero-color;
-  min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+  min-height: 250px;
+  padding: 40px;
   font-size: 2rem;
+  color: $hero-color;
+  background-image: url('../images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .nav {
