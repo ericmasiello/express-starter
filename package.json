@@ -70,7 +70,7 @@
     "prebuild:server": "rimraf build",
     "build:server": "babel src -d build --copy-files --source-maps --ignore test.js",
     "prebuild:client": "rimraf public/build",
-    "build:client": "cross-env NODE_ENV=production webpack -p --progress --env=dist",
+    "build:client": "cross-env NODE_ENV=production webpack --progress --env=dist",
     "prepush": "npm run validate"
   },
   "repository": {
