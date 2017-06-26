@@ -1,7 +1,12 @@
 @import 'vars';
 
 body {
+  margin: 0;
   font-family: $font-family;
-  background-color: #fefefe;
   color: $primary-color;
+  background-color: #fefefe;
+}
+
+ul > li:not(:last-child) {
+  margin-bottom: 0.25rem;
 }
