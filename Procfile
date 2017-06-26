@@ -1,2 +1,2 @@
-yarn run build
+npm rebuild node-sass
 yarn run start
