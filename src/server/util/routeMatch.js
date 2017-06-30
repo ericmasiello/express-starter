@@ -11,6 +11,16 @@ import { CSS_MODULE_PATTERN } from '../../../webpack/config';
 
 const distConfig = configFactory('dist');
 
+function renderPage(response: express$Response) {
+  return (html: string, buildPath: ?string, isProd: boolean) => {
+    response.render('index', {
+      html,
+      buildPath,
+      isProd,
+    });
+  };
+}
+
 export function getBuildPath(isprodEnv: boolean, webpackConfig: Namespace$WebpackConfig) {
   if (isprodEnv) {
     // remove trailing slash
@@ -38,11 +48,7 @@ export function routeMatchCallback(response: express$Response): Function {
       );
 
       const buildPath = getBuildPath(isprod, distConfig);
-
-      response.render('index', {
-        html,
-        buildPath,
-      });
+      renderPage(response)(html, buildPath, isprod);
       return;
     }
 
@@ -72,9 +78,5 @@ export default function routeMatch(request: express$Request, response: express$R
   }
 
   const buildPath = getBuildPath(isprod, distConfig);
-
-  response.render('index', {
-    html: '',
-    buildPath,
-  });
+  renderPage(response)('', buildPath, isprod);
 }

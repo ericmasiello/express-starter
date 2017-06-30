@@ -73,6 +73,7 @@ describe('routeMatchCallback', () => {
       expect(mockResponse.render).toBeCalledWith('index', {
         buildPath: '/build',
         html: mockHtml,
+        isProd: true,
       });
     });
 

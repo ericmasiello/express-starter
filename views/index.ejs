@@ -6,7 +6,9 @@
   <title>Express Starter</title>
   <meta name="description" content="FIXME">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<%-buildPath%>/bundle.css" />
+  <%if (isProd) { %>
+    <link rel="stylesheet" href="<%-buildPath%>/bundle.css" />
+  <% } %>
 </head>
 <body>
   <!--[if lt IE 9]>
