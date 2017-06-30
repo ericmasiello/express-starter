@@ -1,9 +1,7 @@
 /* @flow */
-/* eslint-disable import/no-extraneous-dependencies */
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpack from 'webpack';
-/* eslint-enable import/no-extraneous-dependencies */
 import configFactory from '../../../webpack.config';
 
 const config = configFactory('dev');

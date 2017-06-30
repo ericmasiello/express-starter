@@ -20,7 +20,7 @@ export default class Home extends Component {
           className={styles.button}
           onClick={() => this.setState({ clicks: this.state.clicks + 1 })}
         >
-          Client Side Validation Checks: {this.state.clicks}
+          Click to verify client side scripting: {this.state.clicks}
         </button>
         <h2>Features</h2>
         <ul>

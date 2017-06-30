@@ -54,7 +54,7 @@ export function routeMatchCallback(response: express$Response): Function {
 
 export default function routeMatch(request: express$Request, response: express$Response): void {
   if (isprod) {
-    /* eslint-disable import/no-extraneous-dependencies, global-require */
+    /* eslint-disable global-require */
     const hook = require('css-modules-require-hook');
     hook({
       generateScopedName: CSS_MODULE_PATTERN,
@@ -62,7 +62,7 @@ export default function routeMatch(request: express$Request, response: express$R
     });
 
     const routes = require('../../client/routes').default;
-    /* eslint-enable import/no-extraneous-dependencies, global-require */
+    /* eslint-enable global-require */
 
     match({
       routes,
