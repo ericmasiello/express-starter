@@ -25,6 +25,7 @@ describe('routeMatch', () => {
     expect(responseMock.render).toBeCalledWith('index', {
       html: '',
       buildPath: null,
+      isProd: false,
     });
   });
 });
