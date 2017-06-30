@@ -2,6 +2,7 @@
 import App from './components/App';
 import Home from './components/Home';
 import Detail from './components/Detail';
+import NotFound from './components/NotFound';
 
 const routes = {
   path: '',
@@ -14,6 +15,10 @@ const routes = {
     {
       path: '/detail/:id',
       component: Detail,
+    },
+    {
+      path: '*',
+      component: NotFound,
     },
   ],
 };
