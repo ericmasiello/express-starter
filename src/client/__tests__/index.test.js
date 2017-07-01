@@ -1,4 +1,5 @@
 import { render } from 'react-dom';
+import '../index';
 
 jest.mock('react-dom');
 
