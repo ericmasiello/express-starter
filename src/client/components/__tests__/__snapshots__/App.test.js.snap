@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<div>
+  <header
+    className={undefined}
+  >
+    <h2>
+      Universal React Express Starter App
+    </h2>
+  </header>
+  <nav
+    className={undefined}
+  >
+    <a
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Details
+    </a>
+  </nav>
+  <div>
+    Hello World!
+  </div>
+</div>
+`;
