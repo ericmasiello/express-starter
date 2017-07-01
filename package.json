@@ -33,6 +33,7 @@
     "css-loader": "^0.28.4",
     "css-modules-require-hook": "^4.0.6",
     "empty": "^0.10.1",
+    "enzyme": "^2.9.1",
     "eslint": "^3.13.0",
     "eslint-config-ericmasiello": "^1.2.0",
     "eslint-loader": "^1.7.1",
@@ -50,6 +51,7 @@
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
     "postcss-loader": "^2.0.6",
+    "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
@@ -98,7 +100,12 @@
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
     },
     "collectCoverageFrom": [
-      "src/server/**/*.js"
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/src/www/",
+      "/src/config/"
     ],
     "coverageThreshold": {
       "global": {

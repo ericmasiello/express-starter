@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<div
+  className={undefined}
+>
+  <button
+    className={undefined}
+    onClick={[Function]}
+  >
+    Click to verify client side scripting: 
+    0
+  </button>
+  <h2>
+    Features
+  </h2>
+  <ul>
+    <li>
+      Styling with Post CSS + Sass
+    </li>
+    <li>
+      Flow Type Integration
+    </li>
+    <li>
+      Express with EJS templates
+    </li>
+    <li>
+      Babel integration for client and server
+    </li>
+    <li>
+      React and React Router
+    </li>
+    <li>
+      ESLint and Stylelint
+    </li>
+    <li>
+      Logging with Bunyan
+    </li>
+  </ul>
+  <h2>
+    Dev-Mode Features
+  </h2>
+  <ul>
+    <li>
+      Hot Module Replacement
+    </li>
+  </ul>
+  <h2>
+    Production-Mode Features
+  </h2>
+  <ul>
+    <li>
+      Server Side Rendering
+    </li>
+  </ul>
+</div>
+`;
