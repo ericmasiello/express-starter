@@ -14,7 +14,7 @@ This script is intended for day-to-day development. It should not be used to run
 
 For logging, we use the `bunyan` library. `bunyan`'s logs are great for machines and provide a wealth of information. However, they are a bit difficult to parse for humans. Therefore, in development, we pipe everything through the bunyan CLI (`babel-node src/www/index.js | bunyan`) which translates the bunyan logs into something more easily understood by humans. 
 
-**Note** `bunyan` logs will not appear in the Visual Studio Code's *Debug Console* if running the app VS Code's debugger. You'll need to run `yarn start` to see the `bunyon` logs appear in your terminal window.
+**Note** `bunyan` logs will not appear in the Visual Studio Code's *Debug Console* if running the app VS Code's debugger. You'll need to run `npm start` to see the `bunyon` logs appear in your terminal window.
 
 ### `build`
 This script uses Webpack to bundle the server code into a production-ready bundle that can be run natively by node without requiring any additional transpilation. The output of the bundled server code is output to `build/server.js`. The `prebuild` npm script is responsible for emptying the contents of the `build` directory before bundling the server code.
