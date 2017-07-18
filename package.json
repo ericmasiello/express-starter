@@ -2,8 +2,8 @@
   "name": "express-starter",
   "version": "0.1.0",
   "engines": {
-    "node": "8.1.4",
-    "npm": "5.0.3"
+    "node": ">=8.1.4",
+    "npm": ">=5.0.3"
   },
   "main": "index.js",
   "dependencies": {
@@ -55,8 +55,8 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "stylelint": "^7.11.1",
-    "stylelint-config-ericmasiello": "^0.1.0",
+    "stylelint": "^8.0.0",
+    "stylelint-config-ericmasiello": "^1.0.0",
     "webpack": "^2.4.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0",
