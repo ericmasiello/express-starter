@@ -1,10 +1,8 @@
 /* @flow */
 import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpack from 'webpack';
-import configFactory from '../../../webpack.config';
+import webpackDevBundler from '../util/webpackDevBundler';
 
-const config = configFactory('dev');
-const bundler = webpack(config);
+const { config, bundler } = webpackDevBundler();
 
 const middleware = webpackDevMiddleware(bundler, {
   filename: config.output.filename,

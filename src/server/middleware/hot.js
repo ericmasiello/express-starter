@@ -1,10 +1,8 @@
 /* @flow */
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpack from 'webpack';
-import configFactory from '../../../webpack.config';
+import webpackDevBundler from '../util/webpackDevBundler';
 
-const config = configFactory('dev');
-const bundler = webpack(config);
+const { bundler } = webpackDevBundler();
 
 const middleware = webpackHotMiddleware(bundler, {
   log: console.log, // eslint-disable-line no-console

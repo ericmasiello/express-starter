@@ -16,6 +16,7 @@ module.exports = {
         'src/server/middleware/hot.js',
         'src/server/middleware/webpackDev.js',
         'src/server/util/routeMatch.js',
+        'src/server/util/webpackDevBundler.js',
       ],
     }],
   },
