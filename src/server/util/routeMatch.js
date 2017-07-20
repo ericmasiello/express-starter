@@ -6,9 +6,9 @@ import logger from '../logger';
 import isprod from './isprod';
 import { CSS_MODULE_PATTERN } from '../../../webpack/config';
 
-function renderPage(response: express$Response, viewName = 'index') {
+function renderPage(response: express$Response) {
   return (html: string, isProd: boolean) => {
-    response.render(viewName, {
+    response.render('index', {
       html,
       isProd,
     });
@@ -62,5 +62,5 @@ export default function routeMatch(request: express$Request, response: express$R
     return;
   }
 
-  renderPage(response, 'index.dev.ejs')('', isprod);
+  renderPage(response)('', isprod);
 }
