@@ -14,6 +14,7 @@ module.exports = {
         '**/*.test.js',
         'src/www/dev.js',
         'src/server/middleware/hot.js',
+        'src/server/middleware/webpackDev.js',
         'src/server/util/routeMatch.js',
       ],
     }],

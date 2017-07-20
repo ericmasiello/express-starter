@@ -1,5 +1,4 @@
 /* @flow */
-import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpack from 'webpack';
 import configFactory from '../../../webpack.config';
@@ -7,18 +6,8 @@ import configFactory from '../../../webpack.config';
 const config = configFactory('dev');
 const bundler = webpack(config);
 
-const middleware = [
-  webpackDevMiddleware(bundler, {
-    filename: config.output.filename,
-    publicPath: config.output.publicPath,
-    hot: true,
-    stats: {
-      colors: true,
-    },
-  }),
-  webpackHotMiddleware(bundler, {
-    log: console.log, // eslint-disable-line no-console
-  }),
-];
+const middleware = webpackHotMiddleware(bundler, {
+  log: console.log, // eslint-disable-line no-console
+});
 
 export default middleware;
