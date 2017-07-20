@@ -1,6 +1,7 @@
 import app from '../app';
 
 jest.mock('../middleware/hot', () => jest.fn());
+jest.mock('../middleware/webpackDev', () => ({ default: jest.fn() }));
 jest.mock('../util/isprod', () => true);
 
 it('should be defined when running in a development environment', () => {

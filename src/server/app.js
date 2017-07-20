@@ -16,7 +16,9 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 if (!isprod) {
+  const webpackDevMiddleware = require('./middleware/webpackDev'); // eslint-disable-line global-require
   const hotMiddleware = require('./middleware/hot'); // eslint-disable-line global-require
+  app.use(webpackDevMiddleware.default);
   app.use(hotMiddleware.default);
 }
 

@@ -1,15 +1,8 @@
-import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import hot from '../hot';
+import '../hot';
 
-jest.mock('webpack-dev-middleware');
-jest.mock('webpack-hot-middleware');
+jest.mock('webpack-hot-middleware', () => jest.fn());
 
-webpackDevMiddleware.mockImplementation(() => () => 'dev');
-webpackHotMiddleware.mockImplementation(() => () => 'hot');
-
-it('should create a a list of hot middleware', () => {
-  expect(webpackDevMiddleware).toBeCalled();
+it('should call middleware', () => {
   expect(webpackHotMiddleware).toBeCalled();
-  expect(hot.length).toBe(2);
 });
