@@ -60,3 +60,4 @@ typings/
 # App
 build
 public/build
+views/index.ejs

@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require('path');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CSS_MODULE_PATTERN } = require('./webpack/config');
 
 const orderPlugin = new webpack.optimize.OccurrenceOrderPlugin();
@@ -12,7 +13,16 @@ const productionEnvPlugin = new webpack.DefinePlugin({
     NODE_ENV: JSON.stringify('production'),
   },
 });
-const extractTextPluin = new ExtractTextWebpackPlugin('bundle.css');
+const extractTextPluin = new ExtractTextWebpackPlugin('bundle.[hash].css');
+const htmlPlugin = new HtmlWebpackPlugin({
+  template: `!!raw-loader!${path.join(__dirname, 'src/index.template.ejs')}`,
+  filename: path.join(__dirname, 'views/index.ejs'),
+  minify: {
+    removeComments: true,
+    collapseWhitespace: true,
+    conservativeCollapse: true,
+  },
+});
 
 const baseConfig = {
   devtool: 'source-map',
@@ -26,6 +36,7 @@ const baseConfig = {
   },
   plugins: [
     orderPlugin,
+    htmlPlugin,
   ],
   module: {
     loaders: [
@@ -87,6 +98,8 @@ const customConfig = {
     bail: true,
     output: {
       publicPath: '/build/',
+      // path: path.join(process.cwd(), './public/build'),
+      filename: '[name].[hash].js',
     },
     plugins: [
       productionEnvPlugin,

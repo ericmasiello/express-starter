@@ -8,9 +8,3 @@ export type Namespace$DetailParams = {
     id: string,
   },
 };
-
-export type Namespace$WebpackConfig = {
-  output: {
-    publicPath: string,
-  },
-};

@@ -71,7 +71,6 @@ describe('routeMatchCallback', () => {
       };
       result(null, null, renderProps);
       expect(mockResponse.render).toBeCalledWith('index', {
-        buildPath: '/build',
         html: mockHtml,
         isProd: true,
       });
