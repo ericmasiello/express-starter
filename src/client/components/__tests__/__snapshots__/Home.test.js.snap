@@ -16,7 +16,7 @@ exports[`should render 1`] = `
   </h2>
   <ul>
     <li>
-      Styling with Post CSS + Sass
+      Styling with CSS Modules, Post CSS, and Sass
     </li>
     <li>
       Flow Type Integration
