@@ -22,9 +22,8 @@ describe('routeMatch', () => {
 
     expect(match).not.toBeCalled();
 
-    expect(responseMock.render).toBeCalledWith('index', {
+    expect(responseMock.render).toBeCalledWith('index.dev.ejs', {
       html: '',
-      buildPath: null,
       isProd: false,
     });
   });

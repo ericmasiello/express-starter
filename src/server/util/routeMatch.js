@@ -2,31 +2,17 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { RouterContext, match } from 'react-router';
-// import { match } from 'react-router';
 import logger from '../logger';
 import isprod from './isprod';
-import configFactory from '../../../webpack.config';
-import type { Namespace$WebpackConfig } from '../../types';
 import { CSS_MODULE_PATTERN } from '../../../webpack/config';
 
-const distConfig = configFactory('dist');
-
-function renderPage(response: express$Response) {
-  return (html: string, buildPath: ?string, isProd: boolean) => {
-    response.render('index', {
+function renderPage(response: express$Response, viewName = 'index') {
+  return (html: string, isProd: boolean) => {
+    response.render(viewName, {
       html,
-      buildPath,
       isProd,
     });
   };
-}
-
-export function getBuildPath(isprodEnv: boolean, webpackConfig: Namespace$WebpackConfig) {
-  if (isprodEnv) {
-    // remove trailing slash
-    return webpackConfig.output.publicPath.replace(/(.+)(\/$)/gm, '$1');
-  }
-  return null;
 }
 
 export function routeMatchCallback(response: express$Response): Function {
@@ -47,8 +33,7 @@ export function routeMatchCallback(response: express$Response): Function {
         <RouterContext {...renderProps} />,
       );
 
-      const buildPath = getBuildPath(isprod, distConfig);
-      renderPage(response)(html, buildPath, isprod);
+      renderPage(response)(html, isprod);
       return;
     }
 
@@ -77,6 +62,5 @@ export default function routeMatch(request: express$Request, response: express$R
     return;
   }
 
-  const buildPath = getBuildPath(isprod, distConfig);
-  renderPage(response)('', buildPath, isprod);
+  renderPage(response, 'index.dev.ejs')('', isprod);
 }
