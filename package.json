@@ -68,6 +68,7 @@
     "postinstall": "npm rebuild node-sass",
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node ./build/www",
+    "predev": "cross-env webpack --progress --env=dev",
     "dev": "nodemon --ignore src/client src/www/dev.js | bunyan",
     "validate": "npm-run-all --parallel test flow lint lint:style",
     "test": "jest --coverage",

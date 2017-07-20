@@ -24,7 +24,7 @@ export default class Home extends Component {
         </button>
         <h2>Features</h2>
         <ul>
-          <li>Styling with Post CSS + Sass</li>
+          <li>Styling with CSS Modules, Post CSS, and Sass</li>
           <li>Flow Type Integration</li>
           <li>Express with EJS templates</li>
           <li>Babel integration for client and server</li>
