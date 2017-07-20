@@ -10,6 +10,7 @@ module.exports = {
       devDependencies: [
         './postcss.config.js',
         './webpack.config.js',
+        './webpack/**/*.js',
         '**/*.test.js',
         'src/www/dev.js',
         'src/server/middleware/hot.js',
