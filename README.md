@@ -1,3 +1,5 @@
+> Note: This is an experiment that needs to be vetted
+
 # What is this for?
 
 _There's dozens of Node + React starter projects. Why should you use this one to start your next project?_
