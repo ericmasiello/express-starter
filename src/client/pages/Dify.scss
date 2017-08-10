@@ -1,0 +1,13 @@
+.header {
+  background-image: url('../images/seamstress.png');
+
+  :global {
+    .header__overlay {
+      background-color: rgba(#525557, 0.8);
+    }
+
+    .vp-digital-logo {
+      margin-bottom: 3.4375rem;
+    }
+  }
+}
