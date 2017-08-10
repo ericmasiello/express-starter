@@ -8,3 +8,9 @@ export type Namespace$DetailParams = {
     id: string,
   },
 };
+
+export type PPP$StepProps = {
+  decorationNode: React$Element<*>,
+  title: string,
+  description: string,
+};

@@ -1,24 +1,2 @@
 @import '../styles/vars';
 
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 250px;
-  padding: 40px;
-  font-size: 2rem;
-  color: $hero-color;
-  background-image: url('../images/background.jpg');
-  background-position: center;
-  background-size: cover;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
-}
-
-.nav {
-  display: flex;
-  padding: 1rem;
-
-  > *:not(:first-child) {
-    padding-left: 0.5rem;
-  }
-}

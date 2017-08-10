@@ -1,20 +1,20 @@
 /* @flow */
 import App from './components/App';
-import Home from './components/Home';
-import Detail from './components/Detail';
 import NotFound from './components/NotFound';
+import Tower from './pages/Tower';
+import Dify from './pages/Dify';
 
 const routes = {
   path: '',
   component: App,
   childRoutes: [
     {
-      path: '/',
-      component: Home,
+      path: '/websites',
+      component: Tower,
     },
     {
-      path: '/detail/:id',
-      component: Detail,
+      path: '/design-services',
+      component: Dify,
     },
     {
       path: '*',

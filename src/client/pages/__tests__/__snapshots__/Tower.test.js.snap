@@ -1,0 +1,1031 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<div
+  className={undefined}
+  data-waypoint={true}
+  id="tower-top"
+>
+  <header
+    className="header header--full-height"
+  >
+    <div
+      className="header__overlay"
+    />
+    <nav
+      className="navigation"
+      data-waypoint-nav={true}
+    >
+      <a
+        className="navigation__link navigation__link--on-stuck navigation__link--logo"
+        data-waypoint-link={true}
+        href="#top"
+      >
+        <img
+          alt="vistaprint digital v"
+          className="vp-digital-v-logo"
+          height="35"
+          src="https://stencil.digital.vistaprint.com/assets/vp-digital-v-logo.svg"
+          width="40"
+        />
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={3}
+        data-waypoint-link={true}
+        href="#tower-builder"
+      >
+        Builder
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={1}
+        data-waypoint-link={true}
+        href="#tower-blocks"
+      >
+        Blocks
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={2}
+        data-waypoint-link={true}
+        href="#tower-templates"
+      >
+        Templates
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={1}
+        data-waypoint-link={true}
+        href="#tower-mobile"
+      >
+        Mobile
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={2}
+        data-waypoint-link={true}
+        href="#tower-reviews"
+      >
+        Reviews
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={2}
+        data-waypoint-link={true}
+        href="#tower-features"
+      >
+        Features
+      </a>
+      <a
+        className="navigation__link"
+        data-priority={2}
+        data-waypoint-link={true}
+        href="#tower-pricing"
+      >
+        Pricing
+      </a>
+      <a
+        className="button button--success navigation__button navigation__link--on-stuck"
+        data-waypoint-link={true}
+        disabled={undefined}
+        href="#tower-top"
+        rel="noopener noreferrer"
+      >
+        Try for Free!
+      </a>
+    </nav>
+    <div
+      className="header__container"
+    >
+      <div
+        className="header__content"
+      >
+        <img
+          alt="vistaprint digital"
+          className="vp-digital-logo"
+          height="60"
+          src="https://stencil.digital.vistaprint.com/assets/vp-digital-logo.svg"
+          width="120"
+        />
+        <h1
+          className="t-jumbo-fluid u-text-shadow"
+        >
+          Website Builder
+        </h1>
+        <div>
+          <h1
+            className="u-text-shadow t2-fluid u-mb-20 u-mt-30"
+          >
+            Finally, a truly simple way to build a website you'll be proud of.
+          </h1>
+          <div
+            className="header__content__email"
+          >
+            <button
+              className="button button--success u-uppercase u-mb-10"
+            >
+              Start Your Free Trial
+            </button>
+          </div>
+        </div>
+      </div>
+      <a
+        className="header__pointer"
+        data-waypoint-link-first={true}
+        href="#tower-builder"
+      >
+        <svg
+          className="icon icon--md icon-chevron-down header__pointer__icon"
+          height={32}
+          viewBox="0 0 64 64"
+          width={32}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M55.4 21.3L33.6 45.1c-.1.1 0 .2-.1.3-.5.4-1 .6-1.5.6s-1-.2-1.4-.5c-.1-.1-.1-.2-.1-.3L8.6 21.3c-.7-.7-.7-2 0-2.7.7-.7 1.9-.7 2.7 0L32 41.2l20.7-22.6c.7-.7 1.9-.7 2.7 0 .8.7.8 1.9 0 2.7z"
+          />
+        </svg>
+      </a>
+    </div>
+  </header>
+  <section
+    className="section section--lg u-text-center"
+    data-waypoint={true}
+    data-waypoint-trigger={true}
+    id="tower-builder"
+  >
+    <h1
+      className="t2-fluid u-bold"
+    >
+      A website that practically builds itself
+    </h1>
+    <p
+      className="t4-fluid section__content u-mb-50"
+    >
+      We’ve taken out the time-consuming guesswork. Just drag in the type of block you want, then customize it to fit your business and your brand.
+    </p>
+    <div
+      className="builder-demo"
+    >
+      <div
+        className="builder-demo__block"
+      >
+        <img
+          alt="Website Builder Header Block"
+          src="https://stencil.digital.vistaprint.com/docs/assets/block-1.png"
+        />
+        <div
+          className="builder-demo__block__description"
+        >
+          <img
+            alt="drawn arrow"
+            className="drawn-arrow"
+            src="https://stencil.digital.vistaprint.com/docs/assets/drawn-arrow.svg"
+          />
+          <div
+            className="builder-demo__block__description__text"
+          >
+            Header Block
+          </div>
+        </div>
+      </div>
+      <div
+        className="builder-demo__block"
+      >
+        <img
+          alt="Website Builder Demo & Paragraphs Block"
+          src="https://stencil.digital.vistaprint.com/docs/assets/block-2.png"
+        />
+        <div
+          className="builder-demo__block__description"
+        >
+          <img
+            alt="drawn arrow"
+            className="drawn-arrow"
+            src="https://stencil.digital.vistaprint.com/docs/assets/drawn-arrow.svg"
+          />
+          <div
+            className="builder-demo__block__description__text"
+          >
+            Images & Paragraphs Block
+          </div>
+        </div>
+      </div>
+      <div
+        className="builder-demo__block"
+      >
+        <img
+          alt="Website Builder Social Block"
+          src="https://stencil.digital.vistaprint.com/docs/assets/block-3.png"
+        />
+        <div
+          className="builder-demo__block__description"
+        >
+          <img
+            alt="drawn arrow"
+            className="drawn-arrow"
+            src="https://stencil.digital.vistaprint.com/docs/assets/drawn-arrow.svg"
+          />
+          <div
+            className="builder-demo__block__description__text"
+          >
+            Social Block
+          </div>
+        </div>
+      </div>
+      <div
+        className="builder-demo__block"
+      >
+        <img
+          alt="Website Builder Icon & Text Block"
+          src="https://stencil.digital.vistaprint.com/docs/assets/block-4.png"
+        />
+        <div
+          className="builder-demo__block__description"
+        >
+          <img
+            alt="drawn arrow"
+            className="drawn-arrow"
+            src="https://stencil.digital.vistaprint.com/docs/assets/drawn-arrow.svg"
+          />
+          <div
+            className="builder-demo__block__description__text"
+          >
+            Image With Icon & Text Block
+          </div>
+        </div>
+      </div>
+      <div
+        className="builder-demo__block"
+      >
+        <img
+          alt="Website Builder Contact & Map Block"
+          src="https://stencil.digital.vistaprint.com/docs/assets/block-5.png"
+        />
+        <div
+          className="builder-demo__block__description"
+        >
+          <img
+            alt="drawn arrow"
+            className="drawn-arrow"
+            src="https://stencil.digital.vistaprint.com/docs/assets/drawn-arrow.svg"
+          />
+          <div
+            className="builder-demo__block__description__text"
+          >
+            Contact & Map Block
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      className="button button--success u-uppercase u-mv-30"
+    >
+      Try it yourself!
+    </button>
+    <div
+      className="section--builder__videos"
+    >
+      <div
+        className="video"
+      >
+        <img
+          alt="example-1"
+          className="video--image"
+          src="https://stencil.digital.vistaprint.com/docs/assets/thumb-t3ryj5d1w8.png"
+        />
+        <h1
+          className="t4-fluid u-bold video__title"
+        >
+          Add and arrange beautiful blocks
+        </h1>
+        <div
+          className="video__description"
+        >
+          Don't waste time laying out things like menus, ecommerce, forms, or galleries; we've already built them all for you.
+        </div>
+      </div>
+      <div
+        className="video"
+      >
+        <img
+          alt="example-2"
+          className="video--image"
+          src="https://stencil.digital.vistaprint.com/docs/assets/thumb-jq2uah5u75.png"
+        />
+        <h1
+          className="t4-fluid u-bold video__title"
+        >
+          Fully customize in seconds
+        </h1>
+        <div
+          className="video__description"
+        >
+          Easily edit text and add images from our extensive library, your own photos, or even your other Vistaprint products.
+        </div>
+      </div>
+      <div
+        className="video"
+      >
+        <img
+          alt="example-3"
+          className="video--image"
+          src="https://stencil.digital.vistaprint.com/docs/assets/thumb-8uauj5h7m1.png"
+        />
+        <h1
+          className="t4-fluid u-bold video__title"
+        >
+          Create a consistent brand
+        </h1>
+        <div
+          className="video__description"
+        >
+          Choose from font pairings and color palettes that reflect your brand and are designed to look great together.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="section--blocks"
+    data-waypoint={true}
+    id="tower-blocks"
+  >
+    <div
+      className="media"
+    >
+      <div
+        className="media__body"
+      >
+        <h1
+          className="t3-fluid u-bold"
+        >
+          Build better - with blocks.
+        </h1>
+        <p
+          className="t4-fluid u-mb-20 u-color-inverted-light-50"
+        >
+          When you think about it, all websites have things in common. It’s not the actual pieces that set them apart, it’s how they’re arranged and what they look like.
+        </p>
+        <p
+          className="t4-fluid u-color-inverted-light-50"
+        >
+          We took the elements all websites share and turned them into beautiful blocks that can be rearranged, customized, and personalized so you can create a website that’s all your own - without recreating the wheel.
+        </p>
+      </div>
+      <div
+        className="media__media"
+      >
+        <img
+          alt="Vistaprint's Website Builder customizable elements"
+          src="https://stencil.digital.vistaprint.com/docs/assets/blocks-graphic.png"
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    className="section  section--lg u-pb-0 u-text-center section section--templates"
+    data-waypoint={true}
+    id="tower-templates"
+  >
+    <h1
+      className="t3-fluid u-bold"
+    >
+      Templates made just for you
+    </h1>
+    <p
+      className="t4-fluid u-color-light-60 section__content"
+    >
+      We’ll ask about your business, then personalize responsive templates just for you. Customize with professionally-designed color sets, high-quality images, modern icons, and curated font pairings.
+    </p>
+    <div>
+      <img
+        alt="Vistaprint's Website Builder customizable elements"
+        className="template--image template--image-flush u-mt-50"
+        src="https://stencil.digital.vistaprint.com/docs/assets/template.png"
+      />
+    </div>
+  </section>
+  <section
+    className="section  section--lg u-pb-0 u-text-center section section--responsive"
+    data-waypoint={true}
+    id="tower-mobile"
+  >
+    <h1
+      className="t3-fluid u-bold"
+    >
+      Look your best across devices
+    </h1>
+    <p
+      className="t4-fluid u-color-light-60 section__content"
+    >
+      Customers use all kinds of devices - mobile, tablet, and desktop - so our responsive templates adapt automatically to any screen size. Never waste time building a mobile-only version again.
+    </p>
+    <div>
+      <img
+        alt="Vistaprint's Website Builder customizable elements"
+        className="template--image template--image-flush"
+        src="https://stencil.digital.vistaprint.com/docs/assets/responsive-devices.png"
+      />
+    </div>
+  </section>
+  <section
+    className="section section--lg u-text-center tower__reviews u-color-inverted"
+    data-waypoint={true}
+    id="tower-reviews"
+  >
+    <h1
+      className="t3-fluid u-bold u-color-inverted"
+    >
+      Hear what real people are saying
+    </h1>
+    <p
+      className="t4-fluid section__content u-color-inverted"
+    >
+      The Vistaprint Digital website builder has been described as easy, intuitive, fast, and even fun. But don’t take our word for it; listen to real people who tried our site builder for the very first time and shared their honest feedback about the experience.
+    </p>
+  </section>
+  <section
+    className="section section--lg u-text-center"
+    data-waypoint={true}
+    id="tower-features"
+  >
+    <h1
+      className="t3-fluid u-bold"
+    >
+      Search-friendly, mobile-friendly, you-friendly
+    </h1>
+    <div
+      className="feature-grid u-mt-50 u-pt-20"
+    >
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-equalizer feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.6 11.3c-3.1 0-5.6 2.5-5.6 5.6s2.5 5.6 5.6 5.6 5.6-2.5 5.6-5.6-2.5-5.6-5.6-5.6zm26.5 7.5H31.8c-.9 4.3-4.7 7.5-9.2 7.5-5.2 0-9.4-4.2-9.4-9.4s4.2-9.4 9.4-9.4c4.6 0 8.3 3.2 9.2 7.5h17.3c.9 0 1.7.8 1.7 1.9 0 1.1-.8 1.9-1.7 1.9zm-7.7 7.5c-3.1 0-5.6 2.5-5.6 5.6 0 3.1 2.5 5.6 5.6 5.6S47 35.1 47 32s-2.5-5.7-5.6-5.7zm0 15.1c-4.5 0-8.3-3.2-9.2-7.5H14.9c-.9 0-1.7-.8-1.7-1.9 0-1 .8-1.9 1.7-1.9h17.3c.9-4.3 4.7-7.5 9.2-7.5 5.2 0 9.4 4.2 9.4 9.4s-4.2 9.4-9.4 9.4zm-18.8 0c-3.1 0-5.6 2.5-5.6 5.6 0 3.1 2.5 5.6 5.6 5.6s5.6-2.5 5.6-5.6c0-3.1-2.5-5.6-5.6-5.6zm26.5 7.5H31.8c-.9 4.3-4.7 7.5-9.2 7.5-5.2 0-9.4-4.2-9.4-9.4s4.2-9.4 9.4-9.4c4.6 0 8.3 3.2 9.2 7.5h17.3c.9 0 1.7.8 1.7 1.9 0 1.1-.8 1.9-1.7 1.9zm9.2-43.3c0-1-.8-1.9-1.9-1.9H7.5c-1 0-1.9.8-1.9 1.9v52.7c0 1 .8 1.9 1.9 1.9h48.9c1 0 1.9-.8 1.9-1.9V5.6zM56.5 64h-49c-3.1 0-5.6-2.5-5.6-5.6V5.6C1.9 2.5 4.4 0 7.5 0h48.9C59.5 0 62 2.5 62 5.6v52.7c.1 3.1-2.4 5.7-5.5 5.7z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Vistaprint brand matching
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Already created Vistaprint marketing materials? We can coordinate a website with images and logos you’ve already added!
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-mobile-portrait feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M44 64H20c-6.6 0-12-5.4-12-12V12C8 5.4 13.4 0 20 0h24c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm8-52c0-4.4-3.6-8-8-8H20c-4.4 0-8 3.6-8 8v40c0 4.4 3.6 8 8 8h24c4.4 0 8-3.6 8-8V12zm-14 0H26c-1.1 0-2-.9-2-2s.9-2 2-2h12c1.1 0 2 .9 2 2s-.9 2-2 2zm-6 36c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Tablet & mobile websites
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Our responsive templates build tablet and mobile versions automatically as you go so you save time and look great.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-lifesaver-a feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32 64C14.3 64 0 49.7 0 32S14.3 0 32 0s32 14.3 32 32-14.3 32-32 32zm0-4c6 0 11.5-1.9 16-5.1l-7.9-9.2C37.7 47.1 35 48 32 48s-5.7-.9-8.1-2.3L16 54.9c4.5 3.2 10 5.1 16 5.1zm12-28c0-6.6-5.4-12-12-12s-12 5.4-12 12 5.4 12 12 12 12-5.4 12-12zM4 32c0 8.1 3.5 15.3 8.9 20.4l7.8-9.1C17.8 40.4 16 36.4 16 32c0-3.9 1.4-7.3 3.7-10.1l-7.9-9.2C7 17.7 4 24.5 4 32zM32 4c-6.5 0-12.4 2.3-17.2 6l7.8 9.1c2.6-1.9 5.9-3.1 9.4-3.1s6.8 1.2 9.4 3.1l7.8-9.1C44.4 6.3 38.5 4 32 4zm20.2 8.7l-7.9 9.2C46.6 24.7 48 28.1 48 32c0 4.4-1.8 8.4-4.7 11.3l7.8 9.1C56.5 47.3 60 40.1 60 32c0-7.5-3-14.3-7.8-19.3z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Dedicated support
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Our digital experts are here to help with extended phone hours, live chat, forums, and 24-hour email turnaround.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-internet feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32 64C14.3 64 0 49.7 0 32S14.3 0 32 0s32 14.3 32 32-14.3 32-32 32zm21.4-14h-3.2c-2.2-.6-4.9-1.1-7.9-1.4-1 4.3-2.3 8-4 10.7 6-1.4 11.2-4.8 15.1-9.3zM32 60c2.7 0 5-4.7 6.5-11.8-2.1-.1-4.2-.2-6.5-.2s-4.4.1-6.5.2C27 55.3 29.3 60 32 60zm8-28H24c0 4.5.3 8.6.9 12.3 2.3-.2 4.7-.3 7.1-.3 2.5 0 4.9.1 7.1.3.6-3.7.9-7.8.9-12.3zm-.1-4c-.1-3-.4-5.8-.8-8.3-2.3.2-4.6.3-7.1.3s-4.8-.1-7.1-.3c-.4 2.6-.6 5.4-.8 8.3h15.8zM25.7 59.2c-1.6-2.7-3-6.3-4-10.7-3 .3-5.7.8-7.9 1.4h-3.2c3.9 4.6 9.1 8 15.1 9.3zM4 32c0 6 2 11.5 5.2 16.1 3-1.4 7.1-2.6 11.8-3.3-.6-3.9-1-8.2-1-12.8H4zm5.3-16.2C6.8 19.3 5 23.5 4.3 28h15.8c.1-3.1.5-6.1.9-8.8-4.7-.7-8.7-1.9-11.7-3.4zm1.4-1.8h3.4c2.1.6 4.7 1.1 7.6 1.4 1-4.3 2.3-8 4-10.7-6 1.4-11.2 4.8-15 9.3zM32 4c-2.7 0-5 4.7-6.5 11.8 2.1.1 4.2.2 6.5.2s4.4-.1 6.5-.2C37 8.7 34.7 4 32 4zm6.3.8c1.6 2.7 3 6.3 4 10.7 2.9-.3 5.5-.8 7.6-1.4h3.4c-3.8-4.6-9-8-15-9.3zm16.4 11c-3 1.5-7 2.7-11.7 3.4.5 2.8.8 5.7.9 8.8h15.8c-.7-4.5-2.5-8.7-5-12.2zM44 32c0 4.6-.4 8.9-1 12.8 4.7.7 8.8 1.8 11.8 3.3C58 43.5 60 38 60 32H44z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Custom domain name
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Our small business websites come with custom URLs to make it easy for search engines and customers to find you.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-chart-traffic feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M56 64c-4.4 0-8-3.6-8-8V24c0-4.4 3.6-8 8-8s8 3.6 8 8v32c0 4.4-3.6 8-8 8zm4-40c0-2.2-1.8-4-4-4s-4 1.8-4 4v32c0 2.2 1.8 4 4 4s4-1.8 4-4V24zM32 64c-4.4 0-8-3.6-8-8V8c0-4.4 3.6-8 8-8s8 3.6 8 8v48c0 4.4-3.6 8-8 8zm4-56c0-2.2-1.8-4-4-4s-4 1.8-4 4v48c0 2.2 1.8 4 4 4s4-1.8 4-4V8zM8 64c-4.4 0-8-3.6-8-8V40c0-4.4 3.6-8 8-8s8 3.6 8 8v16c0 4.4-3.6 8-8 8zm4-24c0-2.2-1.8-4-4-4s-4 1.8-4 4v16c0 2.2 1.8 4 4 4s4-1.8 4-4V40z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Search optimization help
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Our SEO tools can help make sure new customers can find you when searching sites like Google, Bing, and more.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-market feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M60 34.2V64H4V33.6c-2.5-2.3-4-5.9-4-9.6L8 0h48l8 24c0 4-1 8-4 10.2zM8 60h48v-8H8v8zm0-12h48V35.8c-.6.1-1.3.2-2 .2-3 0-6.2-1.5-8-4-1.6 2.5-3.8 4-7 4-2.9 0-5.4-1.9-7-4-1.7 2.1-4.2 4-7 4-3.2 0-5.3-1.5-7-4-1.8 2.5-5.1 4-8.1 4-.7 0-1.3-.1-1.9-.2V48zM53.3 4H10.7L5.3 20h53.3L53.3 4zM4 24c.7 3.4 3 8 5.8 8s6.1 0 6.1-4h4s0 4 5 4 4.9-4 4.9-4H34s-.1 4 4.9 4 4.9-4 4.9-4h4s0 4 6.1 4c5.9 0 5.8-8 5.8-8H4z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Web store items
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Have something to sell? Easily accept PayPal payments on your small business website for a single service or multiple items.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-chart-line feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M62 8.5h-2v36c0 2.2-1.8 4-4 4H38.7l5 9.2c.6.9.2 2.1-.8 2.6-1.1.5-2.4.2-3-.7l-5.6-10.2c-.2-.3-.3-.6-.3-.8h-4c0 .3-.1.6-.3.8l-5.6 10.2c-.6.9-2 1.2-3 .7-1.1-.5-1.4-1.7-.8-2.6l5-9.2H8c-2.2 0-4-1.8-4-4v-36H2c-1.1 0-2-.9-2-2s.9-2 2-2h60c1.1 0 2 .9 2 2s-.9 2-2 2zm-6 0H8v34c0 1.1.9 2 2 2h44c1.1 0 2-.9 2-2v-34zm-33.7 13c.2-.2.2-.3.4-.4.1-.1.2-.2.4-.3 0 0 .1 0 .1-.1h.1c.2-.1.3-.1.5-.1.9-.2 1.9.1 2.4.9l9.8 7 12.4-11.3c.6-1 1.8-1.3 2.7-.7 1 .6 1.3 1.8.7 2.7L37.8 32c-.6 1-1.8 1.3-2.7.7-.1-.1-.2-.3-.3-.4-.3-.2-.6-.4-.9-.7L24.6 25l-8.8 10.5c-.6 1-1.8 1.3-2.7.7-1-.6-1.3-1.8-.7-2.8l9.9-11.9z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Site traffic statistics
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Make smart marketing decisions with details about who is visiting your site from where and at what times.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-camera feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 62V2h24v8h40v52H0zM20 6H4v4h16V6zm40 8H4v44h56V14zm-32 8c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 28c6.6 0 12-5.4 12-12s-5.4-12-12-12-12 5.4-12 12 5.4 12 12 12zm16-32h12v4H44v-4z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Free images & icons
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Imagery can make or break a website, so all of our sites come with thousands of free, top-quality images and icons.
+        </div>
+      </div>
+      <div
+        className="feature"
+      >
+        <div
+          className="feature__wrapper feature__wrapper--circle"
+        >
+          <svg
+            className="icon icon--md icon-pencil feature__icon"
+            height={32}
+            viewBox="0 0 64 64"
+            width={32}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M57 7.3c-4-4-10.4-4-14.3 0L25.5 24.5 12.6 37.4l-2.9 2.9-2.9 2.9-2.7 14.2L7 60.3l14.3-2.9 18.6-18.6 2.9-2.9 10-10 4.3-4.3c3.8-4 3.8-10.4-.1-14.3zM8.5 55.8L10.6 45l2-2 8.6 8.6-2 2-10.7 2.2zm31.3-22.7L37 35.9 24.1 48.8l-8.6-8.6 12.9-12.9 12.9-12.9 8.6 8.6-10.1 10.1zm14.3-14.4l-1.4 1.4-8.6-8.6 1.4-1.4c2.4-2.4 6.2-2.4 8.6 0 2.4 2.4 2.4 6.3 0 8.6z"
+            />
+          </svg>
+        </div>
+        <h5
+          className="feature__title u-bold"
+        >
+          Blog content
+        </h5>
+        <div
+          className="feature__description u-color-60"
+        >
+          Blog articles are great way to engage customers and improve your search ranking. Our content block makes it easy!
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="section section--lg tower__price u-text-center"
+    data-waypoint={true}
+    id="tower-pricing"
+  >
+    <h1
+      className="t3-fluid u-bold u-color-inverted"
+    >
+      Easy to build, easy to buy. 
+    </h1>
+    <p
+      className="t4-fluid section__content u-color-inverted u-mb-40"
+    >
+      We created our signature small business website package with you in mind. Now you can get everything you need, without paying for anything you don't.
+    </p>
+    <div
+      className="packages"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="package"
+        >
+          <div
+            className="package__title"
+          >
+            Starter
+          </div>
+          <div
+            className="package__price"
+          >
+            <div
+              className="package__price__currency package__price__data"
+            >
+              $
+            </div>
+            <div
+              className="package__price__value package__price__data"
+            >
+              5
+            </div>
+            <div
+              className="package__price__period package__price__data"
+            >
+              /mo
+            </div>
+          </div>
+          <div
+            className="package__disclaimer"
+          >
+            after one-month free trial
+          </div>
+          <a
+            className="button button--primary"
+            disabled={undefined}
+            href="/next"
+            rel="noopener noreferrer"
+          >
+            Get Started
+          </a>
+          <div
+            className="package__divider"
+          />
+          <div
+            className="package__features"
+          >
+            <div
+              className="package__feature"
+            >
+              Basic Domain Name
+            </div>
+            <div
+              className="package__feature"
+            >
+              Unlimited Pages
+            </div>
+            <div
+              className="package__feature"
+            >
+              Mobile/Responsive Website
+            </div>
+            <div
+              className="package__feature"
+            >
+              Free Image Library
+            </div>
+            <div
+              className="package__cross"
+            />
+            <div
+              className="package__cross"
+            />
+            <div
+              className="package__cross"
+            />
+            <div
+              className="package__cross"
+            />
+            <div
+              className="package__cross"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="card"
+      >
+        <div
+          className="card__label card__label--right"
+        >
+          <div
+            className="card__badge"
+          >
+            Popular
+          </div>
+        </div>
+        <div
+          className="package"
+        >
+          <div
+            className="package__title"
+          >
+            Standard
+          </div>
+          <div
+            className="package__price"
+          >
+            <div
+              className="package__price__currency package__price__data"
+            >
+              $
+            </div>
+            <div
+              className="package__price__value package__price__data"
+            >
+              18
+            </div>
+            <div
+              className="package__price__period package__price__data"
+            >
+              /mo
+            </div>
+          </div>
+          <div
+            className="package__disclaimer"
+          >
+            after one-month free trial
+          </div>
+          <a
+            className="button button--primary"
+            disabled={undefined}
+            href="/next"
+            rel="noopener noreferrer"
+          >
+            Get Started
+          </a>
+          <div
+            className="package__divider"
+          />
+          <div
+            className="package__features"
+          >
+            <div
+              className="package__feature"
+            >
+              Premium Domain Name
+            </div>
+            <div
+              className="package__feature"
+            >
+              Unlimited Pages
+            </div>
+            <div
+              className="package__feature"
+            >
+              Mobile/Responsive Website
+            </div>
+            <div
+              className="package__feature"
+            >
+              Free Image Library
+            </div>
+            <div
+              className="package__feature"
+            >
+              Site Activity Reports
+            </div>
+            <div
+              className="package__feature"
+            >
+              12 Email Addresses
+            </div>
+            <div
+              className="package__feature"
+            >
+              Search Engine Optimization
+            </div>
+            <div
+              className="package__cross"
+            />
+            <div
+              className="package__cross"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="card"
+      >
+        <div
+          className="package"
+        >
+          <div
+            className="package__title"
+          >
+            Premium
+          </div>
+          <div
+            className="package__price"
+          >
+            <div
+              className="package__price__currency package__price__data"
+            >
+              $
+            </div>
+            <div
+              className="package__price__value package__price__data"
+            >
+              25
+            </div>
+            <div
+              className="package__price__period package__price__data"
+            >
+              /mo
+            </div>
+          </div>
+          <div
+            className="package__disclaimer"
+          >
+            after one-month free trial
+          </div>
+          <a
+            className="button button--primary"
+            disabled={undefined}
+            href="/next"
+            rel="noopener noreferrer"
+          >
+            Get Started
+          </a>
+          <div
+            className="package__divider"
+          />
+          <div
+            className="package__features"
+          >
+            <div
+              className="package__feature"
+            >
+              Premium Domain Name
+            </div>
+            <div
+              className="package__feature"
+            >
+              Unlimited Pages
+            </div>
+            <div
+              className="package__feature"
+            >
+              Mobile/Responsive Website
+            </div>
+            <div
+              className="package__feature"
+            >
+              Free Image Library
+            </div>
+            <div
+              className="package__feature"
+            >
+              Site Activity Reports
+            </div>
+            <div
+              className="package__feature"
+            >
+              12 Email Addresses
+            </div>
+            <div
+              className="package__feature"
+            >
+              Search Engine Optimization
+            </div>
+            <div
+              className="package__feature"
+            >
+              Online Store
+            </div>
+            <div
+              className="package__feature"
+            >
+              Social Media Marketing
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
