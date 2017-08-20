@@ -2,7 +2,7 @@
 
 exports[`should render 1`] = `
 <div
-  className={undefined}
+  className="not-found"
 >
   <h1>
     404 - Page Not Found

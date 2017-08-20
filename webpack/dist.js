@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
-const { CSS_MODULE_PATTERN } = require('./config');
 const { extractBundles } = require('./helpers');
 
 const productionEnvPlugin = new webpack.DefinePlugin({
@@ -31,10 +30,10 @@ const distConfig = merge({
       },
       {
         test: /\.(css|scss)$/,
-        loader: ExtractTextWebpackPlugin.extract({
+        use: ExtractTextWebpackPlugin.extract({
           fallback: 'style-loader',
           use: [
-            `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
+            'css-loader',
             'postcss-loader',
             'sass-loader',
           ],

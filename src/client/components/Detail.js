@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
-import styles from './Detail.scss';
+import './Detail.scss';
 import type { Namespace$DetailParams } from '../../types';
 
 // Note: Top level components must be class based for HMR to function
@@ -10,7 +10,7 @@ export default class Detail extends Component {
 
   render() {
     return (
-      <div className={styles.detail}>
+      <div className="detail">
         <h2>Detail page for {this.props.params.id}.</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.

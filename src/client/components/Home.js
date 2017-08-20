@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
 import type { Namespace$AppState } from '../../types';
-import styles from './Home.scss';
+import './Home.scss';
 
 export default class Home extends Component {
   constructor() {
@@ -15,9 +15,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className={styles.home}>
+      <div className="home">
         <button
-          className={styles.button}
+          className="button"
           onClick={() => this.setState({ clicks: this.state.clicks + 1 })}
         >
           Click to verify client side scripting: {this.state.clicks}

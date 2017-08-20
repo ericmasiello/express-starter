@@ -4,7 +4,6 @@ import { renderToString } from 'react-dom/server';
 import { RouterContext, match } from 'react-router';
 import logger from '../logger';
 import isprod from './isprod';
-import { CSS_MODULE_PATTERN } from '../../../webpack/config';
 
 function renderPage(response: express$Response) {
   return (html: string, isProd: boolean) => {
@@ -46,12 +45,6 @@ export function routeMatchCallback(response: express$Response): Function {
 export default function routeMatch(request: express$Request, response: express$Response): void {
   if (isprod) {
     /* eslint-disable global-require */
-    const hook = require('css-modules-require-hook');
-    hook({
-      generateScopedName: CSS_MODULE_PATTERN,
-      extensions: ['.scss', '.css'],
-    });
-
     const routes = require('../../client/routes').default;
     /* eslint-enable global-require */
 

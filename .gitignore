@@ -60,4 +60,5 @@ typings/
 # App
 build
 public/build
+public/images
 views/index.ejs

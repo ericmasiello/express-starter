@@ -2,10 +2,10 @@
 
 exports[`should render 1`] = `
 <div
-  className={undefined}
+  className="home"
 >
   <button
-    className={undefined}
+    className="button"
     onClick={[Function]}
   >
     Click to verify client side scripting: 

@@ -3,14 +3,14 @@
 exports[`should render 1`] = `
 <div>
   <header
-    className={undefined}
+    className="hero"
   >
     <h2>
       Universal React Express Starter App
     </h2>
   </header>
   <nav
-    className={undefined}
+    className="nav"
   >
     <a
       onClick={[Function]}

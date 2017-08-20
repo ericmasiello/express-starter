@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const { CSS_MODULE_PATTERN } = require('./config');
 
 const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 const noEmitOnErrorPlugin = new webpack.NoEmitOnErrorsPlugin();
@@ -38,7 +37,6 @@ const devConfig = {
         test: /\.(css|scss)$/,
         loaders: [
           'style-loader',
-          `css-loader?modules=true&localIdentName=${CSS_MODULE_PATTERN}`,
           'postcss-loader',
           'sass-loader',
         ],

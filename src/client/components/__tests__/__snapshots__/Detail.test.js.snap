@@ -2,7 +2,7 @@
 
 exports[`should render 1`] = `
 <div
-  className={undefined}
+  className="detail"
 >
   <h2>
     Detail page for 
